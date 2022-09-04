@@ -12,13 +12,14 @@ const app = express(); //Creating the server
 
 /* Middlewares*/
 // Use a redirect to admin when accessing root path ('/')
-app.use((req, res, next) => {
+/* app.use((req, res, next) => {
   if (req.url == '/') {
     res.redirect('/admin');
     return;
   }
   next();
 });
+ */
 
 //Use static router
 app.use('/public', express.static('public'));
