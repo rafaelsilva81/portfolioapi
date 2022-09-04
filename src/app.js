@@ -56,7 +56,7 @@ const run = async () => {
   if (port == null || port == '') {
     port = 8000;
   }
-  await app.listen(port, () => console.log('Server started on port 3000'));
+  await app.listen(port, () => console.log('Server started on port 8000'));
 };
 
 run();
