@@ -21,11 +21,15 @@ const app = express(); //Creating the server
 });
  */
 
+app.get('/', function (req, res) {
+  res.redirect(303, '/admin');
+});
+
 //Use static router
 app.use('/public', express.static('public'));
 
 //Use ADMINJS router
-app.use('/', adminRouter);
+app.use('/admin', adminRouter);
 
 //Use JSON for API
 app.use(express.json());
