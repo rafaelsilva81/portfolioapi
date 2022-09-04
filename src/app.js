@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 app.use('/public', express.static('public'));
 
 //Use ADMINJS router
-app.use('/admin', adminRouter);
+app.use('/', adminRouter);
 
 //Use JSON for API
 app.use(express.json());
