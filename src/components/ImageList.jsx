@@ -8,7 +8,7 @@ export default function ListImages(props) {
   console.log(props);
   const bucket = params['images.bucket.0'];
   const key = params['images.key.0'];
-  const image = window.location + '/' + bucket + '/' + key;
+  const image = window.location.origin + '/' + bucket + '/' + key;
   return (
     <div style={{ maxWidth: '5vw' }}>
       {/* show img */}

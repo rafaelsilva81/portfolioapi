@@ -1,12 +1,13 @@
 const AdminJS = require('adminjs');
 const uploadFeature = require('@adminjs/upload');
 const ProjectModel = require('../model/ProjectModel');
+const UploadProvider = require('../providers/UploadProvider');
 
 const ProjectResource = {
   resource: ProjectModel,
   features: [
     uploadFeature({
-      provider: { local: { bucket: 'public' } },
+      provider: new UploadProvider(),
       properties: {
         file: 'images',
         filePath: 'images.path',

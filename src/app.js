@@ -2,6 +2,7 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
+const cors = require('cors');
 require('dotenv').config();
 
 /* Routes Import */
@@ -24,6 +25,9 @@ const app = express(); //Creating the server
 app.get('/', function (req, res) {
   res.redirect(303, '/admin');
 });
+
+//CORS
+app.use(cors())
 
 //Use static router
 app.use('/public', express.static('public'));
