@@ -4,7 +4,7 @@ var ProjectModel = require('../model/ProjectModel');
 
 /* GET all projects. */
 router.get('/', async (req, res) => {
-  const max = req.query.max || 10;
+  const max = req.query.max || 999;
   const data = await ProjectModel.find().limit(Number(max));
   res.json(data);
 });
