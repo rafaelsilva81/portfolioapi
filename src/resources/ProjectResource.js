@@ -26,9 +26,6 @@ const ProjectResource = {
   options: {
     parent: {},
     properties: {
-      description: {
-        type: 'richtext',
-      },
       created_at: {
         isVisible: { list: true, filter: true, show: true, edit: false, add: false },
       },
