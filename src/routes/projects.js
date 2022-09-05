@@ -4,14 +4,9 @@ var ProjectModel = require('../model/ProjectModel');
 
 /* GET all projects. */
 router.get('/', async (req, res) => {
-  const data = await ProjectModel.find();
+  const max = req.query.max || 10;
+  const data = await ProjectModel.find().limit(Number(max));
   res.json(data);
-  /* .then(() => {
-      res.send(data);
-    })
-    .catch((err) => {
-      res.status(500).send({ message: err.message });
-    }); */
 });
 
 /* GET project by id */
