@@ -11,13 +11,9 @@ router.get('/', async (req, res) => {
 
 /* GET project by id */
 router.get('/:id', async (req, res) => {
-  const data = await ProjectModel.findById(req.params.id)
-    .then(() => {
-      res.json(data);
-    })
-    .catch((err) => {
-      res.status(404).send({ error: "project not found or doesn't exist" });
-    });
+  console.log(req.params.id);
+  const data = await ProjectModel.findById(req.params.id);
+  res.json(data);
 });
 
 module.exports = router;
