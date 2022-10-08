@@ -4,6 +4,9 @@ const bcrypt = require('bcrypt');
 const adminJSOptions = require('../admin.config');
 const UserModel = require('../model/UserModel');
 
+/* Get env */
+require('dotenv').config();
+
 const adminRouter = AdminJSExpress.buildAuthenticatedRouter(adminJSOptions, {
   authenticate: async (email, password) => {
     const user = await UserModel.findOne({ email });
@@ -15,6 +18,7 @@ const adminRouter = AdminJSExpress.buildAuthenticatedRouter(adminJSOptions, {
     }
     return false;
   },
+  cookiePassword: process.env.COOKIE_PASSWORD || 'somePassword',
 });
 
 module.exports = adminRouter;
