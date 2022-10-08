@@ -13,7 +13,7 @@ const ProjectResource = {
         filePath: 'image.path',
         filename: `image.filename`,
         filesToDelete: 'image.toDelete',
-        key: 'imag.key',
+        key: 'image.key',
         mimeType: 'image.mimeType',
         bucket: 'image.bucket',
       },
