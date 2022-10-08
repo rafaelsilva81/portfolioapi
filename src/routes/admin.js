@@ -15,7 +15,6 @@ const adminRouter = AdminJSExpress.buildAuthenticatedRouter(adminJSOptions, {
     }
     return false;
   },
-  cookiePassword: 'some-secret-password-used-to-secure-cookie',
 });
 
 module.exports = adminRouter;

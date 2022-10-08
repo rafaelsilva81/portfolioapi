@@ -5,24 +5,24 @@ const UploadProvider = require('../providers/UploadProvider');
 
 const ProjectResource = {
   resource: ProjectModel,
-  /*   features: [
-      uploadFeature({
-        provider: new UploadProvider(),
-        properties: {
-          file: 'images',
-          filePath: 'images.path',
-          filename: `images.filename`,
-          filesToDelete: 'images.toDelete',
-          key: 'images.key',
-          mimeType: 'images.mimeType',
-          bucket: 'images.bucket',
-        },
-        multiple: true,
-        validation: {
-          mimeTypes: ['image/png', 'image/jpeg'],
-        },
-      }),
-    ], */
+  features: [
+    uploadFeature({
+      provider: new UploadProvider(),
+      properties: {
+        file: 'images',
+        filePath: 'images.path',
+        filename: `images.filename`,
+        filesToDelete: 'images.toDelete',
+        key: 'images.key',
+        mimeType: 'images.mimeType',
+        bucket: 'images.bucket',
+      },
+      multiple: false,
+      validation: {
+        mimeTypes: ['image/png', 'image/jpeg', 'image/jpg'],
+      },
+    }),
+  ],
   options: {
     parent: {},
     properties: {
@@ -34,12 +34,12 @@ const ProjectResource = {
       },
       description: {
         type: 'richtext',
-      }
-      /* images: {
+      },
+      image: {
         components: {
           list: AdminJS.bundle('../components/ImageList.jsx'),
         },
-      }, */
+      },
     },
   },
 };

@@ -30,10 +30,10 @@ const ProjectSchema = new mongoose.Schema({
     type: Date,
     required: true,
   },
-  /*   images: {
-      type: JSON,
-      required: false,
-    }, */
+  image: {
+    type: JSON,
+    required: false,
+  },
   created_at: { type: Date, default: Date.now },
 });
 
