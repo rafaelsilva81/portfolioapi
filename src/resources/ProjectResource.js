@@ -11,7 +11,7 @@ const ProjectResource = {
       properties: {
         file: 'images',
         filePath: 'images.path',
-        filename: 'images.filename',
+        filename: 'images.filename' + new Date().getTime(),
         filesToDelete: 'images.toDelete',
         key: 'images.key',
         mimeType: 'images.mimeType',
