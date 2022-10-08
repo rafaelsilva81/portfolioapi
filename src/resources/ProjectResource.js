@@ -9,13 +9,13 @@ const ProjectResource = {
     uploadFeature({
       provider: new UploadProvider(),
       properties: {
-        file: 'images',
-        filePath: 'images.path',
-        filename: `images.filename`,
-        filesToDelete: 'images.toDelete',
-        key: 'images.key',
-        mimeType: 'images.mimeType',
-        bucket: 'images.bucket',
+        file: 'image',
+        filePath: 'image.path',
+        filename: `image.filename`,
+        filesToDelete: 'image.toDelete',
+        key: 'imag.key',
+        mimeType: 'image.mimeType',
+        bucket: 'image.bucket',
       },
       multiple: false,
       validation: {
