@@ -16,17 +16,24 @@ const ProjectSchema = new mongoose.Schema({
     required: true,
     maxLength: 100,
   },
-  tags: [String],
+  tags: {
+    type: [String],
+    required: true,
+  },
   link: String,
   github: String,
   completed: {
     type: Boolean,
     default: false,
   },
-  images: {
-    type: JSON,
-    required: false,
+  date: {
+    type: Date,
+    required: true,
   },
+  /*   images: {
+      type: JSON,
+      required: false,
+    }, */
   created_at: { type: Date, default: Date.now },
 });
 

@@ -24,6 +24,7 @@ class UploadProvider extends BaseProvider {
   // * Fixed this method because original does rename instead of move and it doesn't work with docker volume
   async upload(file, key) {
     const filePath = process.platform === 'win32' ? this.path(key) : this.path(key).slice(1); // adjusting file path according to OS
+    /* Add timestamp to file */
     await fs.promises.mkdir(path.dirname(filePath), { recursive: true });
     await move(file.path, filePath, { overwrite: true });
   }
